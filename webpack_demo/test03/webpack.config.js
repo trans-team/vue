@@ -3,10 +3,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     app: './main.js',
-   // vendor: ['jquery'],
-  },
+   },
   output: {
     filename: '[name].js'
+  },
+   externals: {
+   "jquery": "jQuery"
   },
   plugins: [new HtmlWebpackPlugin({ //自动生成 index.html 插件
       title: 'a test',
